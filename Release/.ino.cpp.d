@@ -13,6 +13,7 @@
  E:\Arduino\hardware\arduino\avr\libraries\SPI/SPI.h \
  C:\Users\Brady\Documents\Arduino\libraries\RF24-master/RF24.h \
  C:\Users\Brady\Documents\Arduino\libraries\RF24-master/RF24_config.h \
+ C:\Users\Brady\Documents\Arduino\libraries\RF24-master/nRF24L01.h \
  E:\Arduino\libraries\NewliquidCrystal/LiquidCrystal_I2C.h \
  E:\Arduino\hardware\arduino\avr\cores\arduino/Print.h \
  E:\Arduino\libraries\NewliquidCrystal/I2CIO.h \
@@ -46,6 +47,8 @@ E:\Arduino\hardware\arduino\avr\libraries\SPI/SPI.h:
 C:\Users\Brady\Documents\Arduino\libraries\RF24-master/RF24.h:
 
 C:\Users\Brady\Documents\Arduino\libraries\RF24-master/RF24_config.h:
+
+C:\Users\Brady\Documents\Arduino\libraries\RF24-master/nRF24L01.h:
 
 E:\Arduino\libraries\NewliquidCrystal/LiquidCrystal_I2C.h:
 

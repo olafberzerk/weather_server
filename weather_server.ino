@@ -6,6 +6,7 @@
 
 #include <SPI.h>
 #include <RF24.h>
+#include <nRF24L01.h>
 
 //#include <Wire.h> // for i2c devices but not used because using lcd
 #include <LiquidCrystal_I2C.h>  // for lcd
