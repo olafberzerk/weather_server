@@ -21,6 +21,12 @@
 								<option id="it.baeyens.arduino.compiler.cpp.sketch.option.incpath.1892362362" name="Include Paths (-I)" superClass="it.baeyens.arduino.compiler.cpp.sketch.option.incpath" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/arduino/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/arduino/variant}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/Libraries/NewliquidCrystal}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/Libraries/NewliquidCrystal/utility}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/Libraries/RF24-master}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/Libraries/SPI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/Libraries/Wire}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/Libraries/Wire/utility}&quot;"/>
 								</option>
 								<inputType id="it.baeyens.arduino.compiler.cpp.sketch.input.513886993" name="CPP source files" superClass="it.baeyens.arduino.compiler.cpp.sketch.input"/>
 							</tool>
@@ -28,6 +34,12 @@
 								<option id="it.baeyens.arduino.compiler.c.sketch.option.incpath.368230554" name="Include Paths (-I)" superClass="it.baeyens.arduino.compiler.c.sketch.option.incpath" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/arduino/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/arduino/variant}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/Libraries/NewliquidCrystal}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/Libraries/NewliquidCrystal/utility}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/Libraries/RF24-master}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/Libraries/SPI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/Libraries/Wire}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/Libraries/Wire/utility}&quot;"/>
 								</option>
 								<inputType id="it.baeyens.arduino.compiler.c.sketch.input.1333130495" name="C Source Files" superClass="it.baeyens.arduino.compiler.c.sketch.input"/>
 							</tool>
