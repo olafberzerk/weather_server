@@ -22,7 +22,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/arduino/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/arduino/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/Libraries/NewliquidCrystal}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/Libraries/NewliquidCrystal/utility}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/Libraries/RF24-master}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/Libraries/SPI}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/Libraries/Wire}&quot;"/>
@@ -35,7 +34,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/arduino/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/arduino/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/Libraries/NewliquidCrystal}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/Libraries/NewliquidCrystal/utility}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/Libraries/RF24-master}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/Libraries/SPI}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/weather_server/Libraries/Wire}&quot;"/>

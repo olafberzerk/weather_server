@@ -6,9 +6,10 @@
 
 #include <SPI.h>
 #include <RF24.h>
+#include <LiquidCrystal_I2C.h>  // for lcd
+
 #include "convert.h"
 
-#include <LiquidCrystal_I2C.h>  // for lcd
 LiquidCrystal_I2C lcd(0x3F, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);  // Set the LCD I2C address
 
 RF24 radio(7,8);
@@ -19,6 +20,9 @@ byte addresses[][6] = {"1Node","2Node"};
 
 void setup()
 {
+	delay(2000);
+	Serial.begin(115200);
+	Serial.println("Entering setup");
 	//setup the radio
 	radio.begin();
 	radio.setChannel(100);
@@ -29,59 +33,52 @@ void setup()
 	   Set Power Amplifier (PA) level to one of four levels: RF24_PA_MIN, RF24_PA_LOW, RF24_PA_HIGH and RF24_PA_MAX
 	   The power levels correspond to the following output levels respectively: NRF24L01: -18dBm, -12dBm,-6dBM, and 0dBm
 	 */
-	radio.setPALevel(RF24_PA_LOW);
+	Serial.println("Setting power level");
+	radio.setPALevel(RF24_PA_MIN);
 
-	//radio.openWritingPipe(addresses[0]);
-	radio.openReadingPipe(1,addresses[1]);
-	// going to read from the transmitter dht
+	//Serial.println("Opening write pipe from this node (2Node) (base station)");
+	radio.openWritingPipe(addresses[1]);
+	Serial.println("Opening read pipe on 1Node");
+	radio.openReadingPipe(1,addresses[0]);
 
+	Serial.println("Starting to listen");
 	radio.startListening();
 
-
-	  Serial.begin(9600);  // Used to type in characters
+	  Serial.begin(115200);  // Used to type in characters
 
 	  lcd.begin(16,2);   // initialize the lcd for 16 chars 2 lines, turn on backlight
 
-	// ------- Quick 3 blinks of backlight  -------------
-	  for(int i = 0; i< 3; i++)
-	  {
-	    lcd.backlight();
-	    delay(250);
-	    lcd.noBacklight();
-	    delay(250);
-	  }
 	  lcd.backlight(); // finish with backlight on
 
 	//-------- Write characters on the display ------------------
 	// NOTE: Cursor Position: (CHAR, LINE) start at 0
 	  lcd.setCursor(0,0); //Start at character 4 on line 0
-	  lcd.print("Hello, world!");
+	  lcd.print("Temp");
 	  delay(1000);
 	  lcd.setCursor(0,1);
-	  lcd.print("HI!YourDuino.com");
-	  delay(8000);
-
-	// Wait and then tell user they can start the Serial Monitor and type in characters to
-	// Display. (Set Serial Monitor option to "No Line Ending")
-	  lcd.clear();
-	  lcd.setCursor(0,0); //Start at character 0 on line 0
-	  lcd.print("Use Serial Mon");
-	  lcd.setCursor(0,1);
-	  lcd.print("Type to display");
-
-
+	  lcd.print("Temp");
+	  delay(2000);
 
 }
 
 void loop()
 {
 
+	uint8_t pipeNum;
 	char buf[32];
-	if(radio.available()){
+	if(radio.available(&pipeNum)){
 	  radio.read(&buf,sizeof(buf));
+	  if (pipeNum == 1) {
+	  Serial.println("Got data on pipe!");
+	  Serial.println(pipeNum);
+	  Serial.println(buf);
+	  }
 	}
 
 
+
+
+/*
     // when characters arrive over the serial port...
     if (Serial.available()) {
       // wait a bit for the entire message to arrive
@@ -94,7 +91,7 @@ void loop()
         lcd.write(Serial.read());
       }
     }
-
+*/
   //power management routine
   /*
   radio.powerDown();
